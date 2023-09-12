@@ -1,0 +1,76 @@
+.container {
+    margin: 3%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media ((max-width: 490px)){
+        margin: 0;
+    }
+}
+
+.mainDisplay {
+    border: 1px solid black;
+    width:30vw;
+    height: 10vh;
+    background-color: azure;
+    text-align: right;
+    padding: 10px;
+    font-size: 30px;
+
+    @media ((max-width: 490px)){
+        width: 90vw;
+    }
+    @media ((max-width: 912px)){
+        width: 60vw;
+    }
+}
+.subDisplay {
+    width: 100%;
+    height: 4vh;
+    font-size: 23px;
+}
+.keypad {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 30vw;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+
+    @media ((max-width: 490px)){
+        width: 90vw;
+    }
+    @media ((max-width: 912px)){
+        width: 60vw;
+    }
+}
+.keys {
+    background-color: hsl(206, 32%, 87%);
+    border: 1px solid black;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+
+    &:hover {
+        background-color: hsl(206, 43%, 83%);
+    }
+    &:last-child {
+        grid-column: span 2;
+    }
+}
+.ackey, .equalkey {
+    background-color: #93acc0;
+
+    &:hover {
+        background-color: #8babc5;
+    }
+}
+.opkey {
+    background-color: #bdd5e8;
+
+    &:hover {
+        background-color: #abcde9;
+    }
+}
